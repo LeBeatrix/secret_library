@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>The Secret Library</title>
+
+    <link rel="stylesheet" href="lp1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c276a8b02c.js" crossorigin="anonymous"></script>
+  
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .lp-bar,h1,button {font-family: "Montserrat", sans-serif}
+        .fa-heart {font-size:190px}
+        .bgimg {
+                background-image: url('images/laura-vinck-Hyu76loQLdk-unsplash.jpg');
+                min-height: 100%;
+                background-position: center;
+                background-size: cover;
+                }
+                #quoteContainer{
+	width:75%;
+	background: #fff;
+	padding:10px;
+	margin:30px auto;
+	text-align: center;
+  height:70px;
+}
+#buttonContainer{
+	width: 100%;
+	text-align: center;
+}
+#quoteButton{
+	width:200px;
+	margin-top: 10px;
+	border:2px solid #46b8da;
+	color:#045;
+	font-family: inherit;
+	font-weight: bold;
+	padding:5px;
+	text-decoration: none;
+	text-align: center;
+}
+
+#quoteButton:hover{
+	cursor:pointer;
+	background:#09c;
+	color: #fff;	
+}
+#quoteButton:active{
+	cursor: pointer;
+}
+#quoteButton{
+	display: inline-block;
+}
+#quoteGenius{
+	font-style: italic;
+	font-weight: 600;
+	text-align: center;
+}
+
+@media screen and(max-width:760px){
+	#quoteButton,#addNew{
+		display: block;
+	}
+}
+        </style>
+
+ <!-- Navbar -->
+<div class="lp-top">
+    <div class="lp-bar lp-pale-red lp-card lp-right-align lp-large">
+      <a class="lp-bar-item lp-button lp-hide-medium lp-hide-large lp-right lp-padding-large lp-hover-white lp-large lp-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large lp-red">Home</a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">About</a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Most Popular</a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Contact</a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Login</a>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="lp-bar-block lp-white lp-hide lp-hide-large lp-hide-medium lp-large">
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">About</a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">Most Popular</a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">Contact</a>
+      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">Login</a>
+    </div>
+  </div>
+  
+  <!-- Header -->
+<header class="bgimg lp-container lp-center" style="padding:128px 16px">
+    <img src="images/The/8.png"  alt="logo">
+    <p class="lp-xlarge">Explore books online for free</p>
+    <button class="lp-button lp-black lp-padding-large lp-large lp-margin-top">Browse our collection</button>
+  </header>
+
+  <!-- First Grid -->
+<div class="lp-row-padding lp-padding-64 lp-container">
+    <div class="lp-content">
+      <div class="lp-twothird">
+        <h1>Read with Cami</h1>
+        <h5 class="lp-padding-32">Here's a new free pdf reader.</h5>
+  
+        <button class="lp-button lp-black" type="submit">
+            <i class="fas fa-download"></i> DOWNLOAD
+          </button>
+      </div>
+  
+      <div class="lp-third lp-center">
+        <img class="lp-padding-64" src="images/chris-lawton-zvKx6ixUhWQ-unsplash.jpg"  alt="Photo By Chris Lawton" width="480px" height="450px" >
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Grid -->
+  <div class="lp-row-padding lp-light-grey lp-padding-64 lp-container">
+    <div class="lp-content">
+      <div class="lp-third lp-center">
+        <i class="far fa-heart lp-padding-64 lp-text-red lp-margin-right"></i>
+      </div>
+  
+      <div class="lp-twothird">
+        <h1>Top Downloaded Books</h1>
+  
+        <p class="lp-text-grey">The top 10 books that are being downloaded.</p>
+        
+        <!-- grid for top books-->
+        <!-- Responsive Grid. -->
+        <div class="lp-row-padding lp-center">
+
+            <div class="lp-col m2 container">
+              <a href="" target="_blank">
+                <img src="images/books/1.png" style="width:100%"  class="lp-hover-opacity images" alt="Book Name">
+                <div class="middle">
+                    <div class="lp-code">DETAILS</div>
+                </div> 
+              </a>
+            </div>
+
+            <div class="lp-col m2 container">
+              <a href="" target="_blank">
+                <img src="images/books/2.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                <div class="middle">
+                    <div class="lp-code">DETAILS</div>
+                </div> 
+                </a> 
+            </div>
+
+            <div class="lp-col m2 container">
+              <a href="" target="_blank">
+                <img src="images/books/3.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                <div class="middle">
+                    <div class="lp-code">DETAILS</div>
+                </div> 
+                </a>  
+            </div>
+
+            <div class="lp-col m2 container">
+              <a href="" target="_blank">
+                <img src="images/books/4.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                    <div class="middle">
+                        <div class="lp-code">DETAILS</div>
+                    </div> 
+  
+             </a>
+            </div>
+
+            <div class="lp-col m2 container">
+                <a href="" target="_blank">
+                    <img src="images/books/5.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                        <div class="middle">
+                            <div class="lp-code">DETAILS</div>
+                        </div> 
+    
+                </a>
+            </div>
+
+        </div>
+        <!--div ends for top col-->
+
+          <div class="lp-row-padding lp-center lp-section ">
+            <div class="lp-col m2 container">
+                <a href="" target="_blank">
+                  <img src="images/books/2.png" style="width:100%" class="lp-hover-opacity" alt="Book Name">
+                  <div class="middle">
+                    <div class="lp-code">DETAILS</div>
+                  </div> 
+                </a>
+            </div>
+
+            <div class="lp-col m2 container">
+              <a href="" target="_blank">
+                <img src="images/books/1.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                    <div class="middle">
+                        <div class="lp-code">DETAILS</div>
+                    </div> 
+              </a>    
+            </div>
+
+            <div class="lp-col m2 container">
+              <a href="" target="_blank">
+                <img src="images/books/4.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                    <div class="middle">
+                        <div class="lp-code">DETAILS</div>
+                    </div> 
+             </a>    
+            </div>
+
+            <div class="lp-col m2 container">
+              <a href="" target="_blank">
+                <img src="images/books/3.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                    <div class="middle">
+                        <div class="lp-code">DETAILS</div>
+                    </div> 
+             </a>   
+            </div>
+
+            <div class="lp-col m2 container">
+                <a href="" target="_blank">
+                <img src="images/books/2.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                <div class="middle">
+                  <div class="lp-code">DETAILS</div>
+                </div> 
+              </a>  
+              </div>
+
+            </div>
+          
+
+
+        <!-- grid ends here-->
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- Quote Container-->
+  <div class="lp-container lp-black lp-center lp-opacity lp-padding-64">
+    <div id="container">
+    <h2>Get Your Daily Quote</h2>
+      <div id="quoteContainer">
+				<p></p>
+				<p id="quoteGenius"></p>			
+      </div><!--end quoteContainer-->
+      
+      <div id="buttonContainer">
+				<a href="#" id="quoteButton">Quote Me</a>
+    </div><!--end buttonContainer-->
+  </div>  
+  </div>
+
+  <!-- Footer -->
+<footer class="lp-container lp-padding-64 lp-right-align lp-opacity lp-light-blue">  
+    <!-- Contact Section -->
+<div class="lp-container lp-light-grey" style="padding:100px 16px" id="contact">
+    <h3>CONTACT</h3>
+    <p class="lp-large">Lets get in touch. Send us a message:</p>
+    <div style="margin-top:32px">
+     
+      
+      <form action="https://www.lpschools.com/action_page.php" target="_blank">
+        <p><input class="lp-input lp-border" type="text" placeholder="Name" required="" name="Name"></p>
+        <p><input class="lp-input lp-border" type="text" placeholder="Email" required="" name="Email"></p>
+        <p><input class="lp-input lp-border" type="text" placeholder="Message" required="" name="Message"></p>
+        <p>
+          <button class="lp-button lp-black" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+      
+    </div>
+  </div>
+    <div class="lp-xlarge lp-padding-32">
+      <i class="fa fa-facebook-official lp-hover-opacity"></i>
+      <i class="fa fa-instagram lp-hover-opacity"></i>
+      <i class="fa fa-twitter lp-hover-opacity"></i>
+   </div>
+   <p><i class="fa fa-map-marker fa-fw  lp-margin-right"></i> Cape Town, RSA</p>
+   <p><i class="fa fa-phone fa-fw  lp-margin-right"></i> Phone: +27 0810488240</p>
+   <p><i class="fa fa-envelope fa-fw  lp-margin-right"> </i> Email: prinsloolene@gmail.com</p>
+   <p> Created by Len&eacute; Prinsloo<br/><i class="fas fa-image"></i> by laura-vinc on Unsplash</p>
+  </footer>
+  
+</body>
+  </html> 
