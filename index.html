@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <script src="https://kit.fontawesome.com/c276a8b02c.js" crossorigin="anonymous"></script>
-  
+    
+
     <style>
         body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         .lp-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -20,71 +23,120 @@
                 background-position: center;
                 background-size: cover;
                 }
-                #quoteContainer{
-	width:75%;
-	background: #fff;
-	padding:10px;
-	margin:30px auto;
-	text-align: center;
-  height:70px;
-}
-#buttonContainer{
-	width: 100%;
-	text-align: center;
-}
-#quoteButton{
-	width:200px;
-	margin-top: 10px;
-	border:2px solid #46b8da;
-	color:#045;
-	font-family: inherit;
-	font-weight: bold;
-	padding:5px;
-	text-decoration: none;
-	text-align: center;
+
+        /* Quote Style*/
+        #quoteContainer{
+        width:75%;
+        background: #fff;
+        padding:10px;
+        margin:30px auto;
+        text-align: center;
+        height:70px;
+                      }
+
+      #buttonContainer{
+        width: 100%;
+        text-align: center;
+                      }
+
+      #quoteButton{
+        width:200px;
+        margin-top: 10px;
+        border:2px solid #46b8da;
+        color:#045;
+        font-family: inherit;
+        font-weight: bold;
+        padding:5px;
+        text-decoration: none;
+        text-align: center;
+                }
+
+      #quoteButton:hover{
+        cursor:pointer;
+        background:#09c;
+        color: #fff;	
+      }
+
+      #quoteButton:active{
+        cursor: pointer;
+      }
+
+      #quoteButton{
+        display: inline-block;
+      }
+
+      #quoteGenius{
+        font-style: italic;
+        font-weight: 600;
+        text-align: center;
+      }
+      .lp-wide {letter-spacing: 10px;}
+        .lp-hover-opacity {cursor: pointer;}
+
+
+        .containerf {
+  position: relative;
+  width: 50%;
 }
 
-#quoteButton:hover{
-	cursor:pointer;
-	background:#09c;
-	color: #fff;	
-}
-#quoteButton:active{
-	cursor: pointer;
-}
-#quoteButton{
-	display: inline-block;
-}
-#quoteGenius{
-	font-style: italic;
-	font-weight: 600;
-	text-align: center;
+      .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
 
-@media screen and(max-width:760px){
-	#quoteButton,#addNew{
-		display: block;
-	}
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .containerf:hover .image {
+  opacity: 0.3;
 }
+
+.containerf:hover .middle {
+  opacity: 1;
+}
+
+      .booktag {
+        background-color: #ffde59;
+        color: #283731;
+        font-size: 16px;
+        padding: 16px 32px;
+      }
+      
+      @media screen and(max-width:760px){
+        #quoteButton,#addNew{
+          display: block;
+        }
+      }
         </style>
 
  <!-- Navbar -->
 <div class="lp-top">
-    <div class="lp-bar lp-pale-red lp-card lp-right-align lp-large">
+    <div class="lp-bar lp-pale-red lp-card lp-large">
+      <a href="index.html" ><img class="lp-small lp-align-left" src="images/The/61.png" width="150px" height="50px"></a>
       <a class="lp-bar-item lp-button lp-hide-medium lp-hide-large lp-right lp-padding-large lp-hover-white lp-large lp-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large lp-red">Home</a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">About</a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Most Popular</a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Contact</a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Login</a>
+      <a href="index.html" class="lp-bar-item lp-button lp-padding-large lp-red">Home</a>
+      <a href="about.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">About</a>
+      <a href="recommended.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Recommended Books</a>
+      <a href="gallery.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Gallery</a>
     </div>
   
     <!-- Navbar on small screens -->
     <div id="navDemo" class="lp-bar-block lp-white lp-hide lp-hide-large lp-hide-medium lp-large">
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">About</a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">Most Popular</a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">Contact</a>
-      <a href="https://www.lpschools.com/lpcss/trylpcss_templates_start_page.htm#" class="lp-bar-item lp-button lp-padding-large">Login</a>
+      <a href="about.html" class="lp-bar-item lp-button lp-padding-large">About</a>
+      <a href="recommended.html" class="lp-bar-item lp-button lp-padding-large">Recommended Books</a>
+      <a href="gallery.html" class="lp-bar-item lp-button lp-padding-large">Gallery</a>
     </div>
   </div>
   
@@ -99,16 +151,17 @@
 <div class="lp-row-padding lp-padding-64 lp-container">
     <div class="lp-content">
       <div class="lp-twothird">
-        <h1>Read with Cami</h1>
-        <h5 class="lp-padding-32">Here's a new free pdf reader.</h5>
+        <h1>NOT FOR SALE</h1>
+        <h5 class="lp-padding-32">The PDF files on this website are used in helping entertaining the Community in this epidemic. I would like to provide the community with Good, "no Great" reading material and I was inspired by the platform 
+          <a href="https://www.pdfdrive.com/" target="_blank">pdfdrive.com</a>.</h5>
   
-        <button class="lp-button lp-black" type="submit">
-            <i class="fas fa-download"></i> DOWNLOAD
-          </button>
+        <a href="https://www.pdfdrive.com/" target="_blank"><button class="lp-button lp-black" type="button">
+            <i class="fas fa-info-circle"></i> Learn More
+          </button></a>
       </div>
   
       <div class="lp-third lp-center">
-        <img class="lp-padding-64" src="images/chris-lawton-zvKx6ixUhWQ-unsplash.jpg"  alt="Photo By Chris Lawton" width="480px" height="450px" >
+        <img class="lp-padding-64 lp-hide-small" src="images/foto-t-UhdlN7u87nA-unsplash.jpg"  alt="Photo By foto-t on Unsplash" width="400px" height="700px" >
       </div>
     </div>
   </div>
@@ -116,127 +169,93 @@
   <!-- Second Grid -->
   <div class="lp-row-padding lp-light-grey lp-padding-64 lp-container">
     <div class="lp-content">
-      <div class="lp-third lp-center">
-        <i class="far fa-heart lp-padding-64 lp-text-red lp-margin-right"></i>
-      </div>
+
+        <h1>Books of the Week</h1>
   
-      <div class="lp-twothird">
-        <h1>Top Downloaded Books</h1>
-  
-        <p class="lp-text-grey">The top 10 books that are being downloaded.</p>
+        <h5 class="lp-text-grey ">The Top 6 Books.</h5>
         
         <!-- grid for top books-->
         <!-- Responsive Grid. -->
-        <div class="lp-row-padding lp-center">
+        <div class="lp-row-padding lp-center lp-padding-32">
 
-            <div class="lp-col m2 container">
-              <a href="" target="_blank">
-                <img src="images/books/1.png" style="width:100%"  class="lp-hover-opacity images" alt="Book Name">
+            <div class="lp-col m2 containerf">
+              <!--<img class="img-zoom file-img" src="" data-original="https://s.pdfdrive.com/assets/thumbs/9b8/9b88b7c17f496a61fc78505130af288e-s.jpg" style="z-index: 10; border-radius: 3px 0px 0px 3px; width: 71px; height: 98px; margin-left: 0px; margin-top: 0px;">-->
+              <a href="phttps://www.pdfdrive.com/living-in-the-light-a-guide-to-personal-transformation-e10172273.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/9b8/9b88b7c17f496a61fc78505130af288e.jpg" class="lp-hover-opacity image" alt="Living in the Light: A guide to personal transformation">
                 <div class="middle">
-                    <div class="lp-code">DETAILS</div>
+                    <div class="booktag">Living in the Light: A guide to personal transformation</div>
                 </div> 
               </a>
             </div>
 
-            <div class="lp-col m2 container">
+            <div class="lp-col m2 containerf">
+              <!--<a href="/give-and-take-why-helping-others-drives-our-success-e58864799.html" class="cover-link preview-link " id="cover-58864799" data-preview="/ebook/preview?id=58864799&amp;session=c55ee8a467a370dd11fcf9dcec21f426" data-download="http://zxhwe70pd0.pdfcloud.org/dl.pdf?id=58864799&amp;h=c55ee8a467a370dd11fcf9dcec21f426&amp;u=5227468" data-download-page="/give-and-take-why-helping-others-drives-our-success-d58864799.html">
+<img class="img-zoom file-img" src="https://s.pdfdrive.com/assets/thumbs/653/653f249a58f438ef343c5da5f023203d.jpg" data-original="https://s.pdfdrive.com/assets/thumbs/653/653f249a58f438ef343c5da5f023203d-s.jpg" alt="Give and Take: WHY HELPING OTHERS DRIVES OUR SUCCESS" style="z-index: 10; border-radius: 3px 0px 0px 3px; width: 71px; height: 98px; margin-left: 0px; margin-top: 0px;">
+</a>-->
               <a href="" target="_blank">
-                <img src="images/books/2.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                <img src="https://s.pdfdrive.com/assets/thumbs/653/653f249a58f438ef343c5da5f023203d.jpg"  class="lp-hover-opacity image" alt="Book Name">
                 <div class="middle">
-                    <div class="lp-code">DETAILS</div>
+                    <div class="booktag">Give and Take: WHY HELPING OTHERS DRIVES OUR SUCCESS</div>
                 </div> 
                 </a> 
             </div>
 
-            <div class="lp-col m2 container">
+            <div class="lp-col m2 containerf">
+              <!--<a href="/mindset-the-new-psychology-of-success-e60365105.html" class="cover-link preview-link " id="cover-60365105" data-preview="/ebook/preview?id=60365105&amp;session=0f2b23ade7721f946e0002a6382265ac" data-download="http://zxhwe70pd0.pdfcloud.org/dl.pdf?id=60365105&amp;h=0f2b23ade7721f946e0002a6382265ac&amp;u=5227468" data-download-page="/mindset-the-new-psychology-of-success-d60365105.html">
+<img class="img-zoom file-img" src="https://s.pdfdrive.com/assets/thumbs/33f/33f1e381acf40f8399b0ec9f5bd7ae6b-s.jpg" data-original="https://s.pdfdrive.com/assets/thumbs/33f/33f1e381acf40f8399b0ec9f5bd7ae6b-s.jpg" alt="Mindset: The New Psychology of Success">
+</a>-->
               <a href="" target="_blank">
-                <img src="images/books/3.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                <img src="https://s.pdfdrive.com/assets/thumbs/33f/33f1e381acf40f8399b0ec9f5bd7ae6b-s.jpg" class="lp-hover-opacity image" alt="Mindset: The New Psychology of Success">
                 <div class="middle">
-                    <div class="lp-code">DETAILS</div>
+                    <div class="booktag">Mindset: The New Psychology of Success</div>
                 </div> 
                 </a>  
             </div>
-
-            <div class="lp-col m2 container">
-              <a href="" target="_blank">
-                <img src="images/books/4.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
-                    <div class="middle">
-                        <div class="lp-code">DETAILS</div>
-                    </div> 
-  
-             </a>
-            </div>
-
-            <div class="lp-col m2 container">
+          
+            <div class="lp-col m2 containerf">
+              <!--<a href="/braiding-sweetgrass-indigenous-wisdom-scientific-knowledge-and-the-teachings-of-plants-e60737077.html" class="cover-link preview-link " id="cover-60737077" data-preview="/ebook/preview?id=60737077&amp;session=1e8a4333c7514960d4ce2695b0c54266" data-download="http://zxhwe70pd0.pdfcloud.org/dl.pdf?id=60737077&amp;h=1e8a4333c7514960d4ce2695b0c54266&amp;u=5227468" data-download-page="/braiding-sweetgrass-indigenous-wisdom-scientific-knowledge-and-the-teachings-of-plants-d60737077.html">
+<img class="img-zoom file-img" src="https://s.pdfdrive.com/assets/thumbs/ed5/ed59854c54d482b0efb0ee9bebbd7a72-s.jpg" data-original="https://s.pdfdrive.com/assets/thumbs/ed5/ed59854c54d482b0efb0ee9bebbd7a72-s.jpg" alt="Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants">
+</a>-->
                 <a href="" target="_blank">
-                    <img src="images/books/5.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
-                        <div class="middle">
-                            <div class="lp-code">DETAILS</div>
-                        </div> 
-    
-                </a>
-            </div>
-
-        </div>
-        <!--div ends for top col-->
-
-          <div class="lp-row-padding lp-center lp-section ">
-            <div class="lp-col m2 container">
-                <a href="" target="_blank">
-                  <img src="images/books/2.png" style="width:100%" class="lp-hover-opacity" alt="Book Name">
+                  <img src="https://s.pdfdrive.com/assets/thumbs/ed5/ed59854c54d482b0efb0ee9bebbd7a72-s.jpg" class="lp-hover-opacity image" alt="Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants">
                   <div class="middle">
-                    <div class="lp-code">DETAILS</div>
+                    <div class="booktag">Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants</div>
                   </div> 
                 </a>
             </div>
 
-            <div class="lp-col m2 container">
+            <div class="lp-col m2 containerf">
+              <!--<a href="/the-power-of-now-a-guide-to-spiritual-enlightenment-e162371455.html" class="cover-link preview-link " id="cover-162371455" data-preview="/ebook/preview?id=162371455&amp;session=fc9f78f5b025419c32a82c946c4176d2" data-download="http://zxhwe70pd0.pdfcloud.org/dl.pdf?id=162371455&amp;h=fc9f78f5b025419c32a82c946c4176d2&amp;u=5227468" data-download-page="/the-power-of-now-a-guide-to-spiritual-enlightenment-d162371455.html">
+<img class="img-zoom file-img" src="https://s.pdfdrive.com/assets/thumbs/d65/d65818a09256c8e3e861e25a6799ab18-s.jpg" data-original="https://s.pdfdrive.com/assets/thumbs/d65/d65818a09256c8e3e861e25a6799ab18-s.jpg" alt="The Power of Now: A Guide to Spiritual Enlightenment">
+</a>-->
               <a href="" target="_blank">
-                <img src="images/books/1.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                <img src="https://s.pdfdrive.com/assets/thumbs/d65/d65818a09256c8e3e861e25a6799ab18-s.jpg" class="lp-hover-opacity image" alt="The Power of Now: A Guide to Spiritual Enlightenment">
                     <div class="middle">
-                        <div class="lp-code">DETAILS</div>
+                        <div class="booktag">The Power of Now: A Guide to Spiritual Enlightenment</div>
                     </div> 
               </a>    
             </div>
 
-            <div class="lp-col m2 container">
+            <div class="lp-col m2 containerf">
+              <!--<a href="/resisting-happiness-a-true-story-about-why-we-sabotage-ourselves-e39563520.html" class="cover-link preview-link " id="cover-39563520" data-preview="/ebook/preview?id=39563520&amp;session=d26773018a95a8d230aab48b021d3682" data-download="http://zxhwe70pd0.pdfcloud.org/dl.pdf?id=39563520&amp;h=d26773018a95a8d230aab48b021d3682&amp;u=5227468" data-download-page="/resisting-happiness-a-true-story-about-why-we-sabotage-ourselves-d39563520.html">
+<img class="img-zoom file-img" src="https://s.pdfdrive.com/assets/thumbs/bf9/bf93b21ca6f860b22862fb495157ee5e-s.jpg" data-original="https://s.pdfdrive.com/assets/thumbs/bf9/bf93b21ca6f860b22862fb495157ee5e-s.jpg" alt="Resisting Happiness: A True Story about Why We Sabotage Ourselves">
+</a>-->
               <a href="" target="_blank">
-                <img src="images/books/4.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
+                <img src="https://s.pdfdrive.com/assets/thumbs/bf9/bf93b21ca6f860b22862fb495157ee5e-s.jpg" class="lp-hover-opacity image" alt="Resisting Happiness: A True Story about Why We Sabotage Ourselves">
                     <div class="middle">
-                        <div class="lp-code">DETAILS</div>
+                        <div class="booktag">Resisting Happiness: A True Story about Why We Sabotage Ourselves</div>
                     </div> 
              </a>    
             </div>
-
-            <div class="lp-col m2 container">
-              <a href="" target="_blank">
-                <img src="images/books/3.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
-                    <div class="middle">
-                        <div class="lp-code">DETAILS</div>
-                    </div> 
-             </a>   
-            </div>
-
-            <div class="lp-col m2 container">
-                <a href="" target="_blank">
-                <img src="images/books/2.png" style="width:100%"  class="lp-hover-opacity" alt="Book Name">
-                <div class="middle">
-                  <div class="lp-code">DETAILS</div>
-                </div> 
-              </a>  
-              </div>
-
-            </div>
-          
-
-
-        <!-- grid ends here-->
-
-      </div>
+          </div>
+          <!--div ends for top col-->
+  <!-- grid ends here-->
+      
     </div>
-  </div>
+  </div><!-- Second Grid Div closed -->
   
   <!-- Quote Container-->
-  <div class="lp-container lp-black lp-center lp-opacity lp-padding-64">
+  <div class="lp-container lp-lime lp-center lp-opacity lp-padding-64">
     <div id="container">
     <h2>Get Your Daily Quote</h2>
       <div id="quoteContainer">
@@ -251,37 +270,112 @@
   </div>
 
   <!-- Footer -->
-<footer class="lp-container lp-padding-64 lp-right-align lp-opacity lp-light-blue">  
-    <!-- Contact Section -->
-<div class="lp-container lp-light-grey" style="padding:100px 16px" id="contact">
-    <h3>CONTACT</h3>
-    <p class="lp-large">Lets get in touch. Send us a message:</p>
-    <div style="margin-top:32px">
-     
-      
-      <form action="https://www.lpschools.com/action_page.php" target="_blank">
-        <p><input class="lp-input lp-border" type="text" placeholder="Name" required="" name="Name"></p>
-        <p><input class="lp-input lp-border" type="text" placeholder="Email" required="" name="Email"></p>
-        <p><input class="lp-input lp-border" type="text" placeholder="Message" required="" name="Message"></p>
-        <p>
-          <button class="lp-button lp-black" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
-        </p>
-      </form>
-      
+  <footer class="footer-section">
+    <div class="container lp-black">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row lp-padding-64 lp-padding-large">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>Cape Town, South Africa</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>+27 012 3456 789</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>secretlibrary@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row lp-padding-64">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="images/The/3.png" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>The books on this website are not for sale.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Recommended Books</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget lp-align-left">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-    <div class="lp-xlarge lp-padding-32">
-      <i class="fa fa-facebook-official lp-hover-opacity"></i>
-      <i class="fa fa-instagram lp-hover-opacity"></i>
-      <i class="fa fa-twitter lp-hover-opacity"></i>
-   </div>
-   <p><i class="fa fa-map-marker fa-fw  lp-margin-right"></i> Cape Town, RSA</p>
-   <p><i class="fa fa-phone fa-fw  lp-margin-right"></i> Phone: +27 0810488240</p>
-   <p><i class="fa fa-envelope fa-fw  lp-margin-right"> </i> Email: prinsloolene@gmail.com</p>
-   <p> Created by Len&eacute; Prinsloo<br/><i class="fas fa-image"></i> by laura-vinc on Unsplash</p>
-  </footer>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2020, All Right Reserved <a href="https://lebeatrix.github.io/" target="_blank">Len&eacute; Prinsloo</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li style="display: inline-block; margin-left: 20px;"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="recommended.html">Recommended Books</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
   
 </body>
   </html> 
