@@ -32,7 +32,7 @@ ul {
     padding: 0px;
 }
 .footer-section {
-  background:lp-light-blue;
+  background:black;
   position: relative;
 }
 .footer-cta {
@@ -182,6 +182,7 @@ ul {
 }
 .footer-menu li:hover a{
   color: #f44336;
+  
 }
 .footer-menu li a {
   font-size: 14px;

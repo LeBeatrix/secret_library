@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>The Secret Library</title>
+
+    <link rel="stylesheet" href="lp1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://kit.fontawesome.com/c276a8b02c.js" crossorigin="anonymous"></script>
+    
+
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .lp-bar,h1,button {font-family: "Montserrat", sans-serif}
+        .fa-heart {font-size:190px}
+        .bgimg {
+                background-image: url('images/laura-vinck-Hyu76loQLdk-unsplash.jpg');
+                min-height: 100%;
+                background-position: center;
+                background-size: cover;
+                }
+
+        /* Quote Style*/
+        #quoteContainer{
+        width:75%;
+        background: #fff;
+        padding:10px;
+        margin:30px auto;
+        text-align: center;
+        height:70px;
+                      }
+
+      #buttonContainer{
+        width: 100%;
+        text-align: center;
+                      }
+
+      #quoteButton{
+        width:200px;
+        margin-top: 10px;
+        border:2px solid #46b8da;
+        color:#045;
+        font-family: inherit;
+        font-weight: bold;
+        padding:5px;
+        text-decoration: none;
+        text-align: center;
+                }
+
+      #quoteButton:hover{
+        cursor:pointer;
+        background:#09c;
+        color: #fff;	
+      }
+
+      #quoteButton:active{
+        cursor: pointer;
+      }
+
+      #quoteButton{
+        display: inline-block;
+      }
+
+      #quoteGenius{
+        font-style: italic;
+        font-weight: 600;
+        text-align: center;
+      }
+      .lp-wide {letter-spacing: 10px;}
+        .lp-hover-opacity {cursor: pointer;}
+
+
+        .containerf {
+  position: relative;
+  width: 50%;
+}
+
+      .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .containerf:hover .image {
+  opacity: 0.3;
+}
+
+.containerf:hover .middle {
+  opacity: 1;
+}
+
+      .booktag {
+        background-color: lightblue;
+        color: #283731;
+        font-size: 16px;
+        padding: 16px 32px;
+      }
+      
+      @media screen and(max-width:760px){
+        #quoteButton,#addNew{
+          display: block;
+        }
+      }
+        </style>
+
+ <!-- Navbar -->
+ <div class="lp-top">
+  <div class="lp-bar lp-pale-red lp-card lp-large">
+    <a href="index.html" ><img class="lp-small lp-align-left" src="images/The/61.png" width="150px" height="50px"></a>
+    <a class="lp-bar-item lp-button lp-hide-medium lp-hide-large lp-right lp-padding-large lp-hover-white lp-large lp-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+   <a href="index.html" class="lp-bar-item lp-button lp-padding-large lp-hover-red">Home</a>
+      <a href="about.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">About</a>
+      <a href="recommended.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-red">Recommended Books</a>
+      <a href="gallery.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Gallery</a>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="lp-bar-block lp-white lp-hide lp-hide-large lp-hide-medium lp-large">
+      <a href="about.html" class="lp-bar-item lp-button lp-padding-large">About</a>
+      <a href="recommended.html" class="lp-bar-item lp-button lp-padding-large">Recommended Books</a>
+      <a href="gallery.html" class="lp-bar-item lp-button lp-padding-large">Gallery</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+<header class="bgimg lp-container lp-center" style="padding:128px 16px">
+  <h1 class="lp-jumbo lp-animate-top" style="text-shadow: 5px 10px 2px #93968f, 
+  -3px 6px 5px #58d1e3; font-family: Raleway,sans-serif;">RECOMMENDED BOOKS</h1>
+  </header>
+
+  <!-- Second Grid -->
+  <div class="lp-row-padding lp-light-grey lp-padding-64 lp-container">
+    <div class="lp-content">
+
+        <h1>Best Books of the Week</h1>
+        
+        <!-- grid for top books-->
+        <!-- Responsive Grid. -->
+        <div class="lp-row-padding lp-center lp-padding-32">
+
+            <div class="lp-col m2 containerf">
+              <a href="https://www.pdfdrive.com/living-in-the-light-a-guide-to-personal-transformation-e10172273.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/9b8/9b88b7c17f496a61fc78505130af288e.jpg" class="lp-hover-opacity image" alt="Living in the Light: A guide to personal transformation">
+                <div class="middle">
+                    <div class="booktag">Living in the Light: A guide to personal transformation</div>
+                </div> 
+              </a>
+            </div>
+
+            <div class="lp-col m2 containerf">
+              <a href="https://www.pdfdrive.com/give-and-take-why-helping-others-drives-our-success-e58864799.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/653/653f249a58f438ef343c5da5f023203d.jpg"  class="lp-hover-opacity image" alt="Give and Take: WHY HELPING OTHERS DRIVES OUR SUCCESS">
+                <div class="middle">
+                    <div class="booktag">Give and Take: WHY HELPING OTHERS DRIVES OUR SUCCESS</div>
+                </div> 
+                </a> 
+            </div>
+
+            <div class="lp-col m2 containerf">
+               <a href="https://www.pdfdrive.com/mindset-the-new-psychology-of-success-e60365105.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/33f/33f1e381acf40f8399b0ec9f5bd7ae6b-s.jpg" class="lp-hover-opacity image" alt="Mindset: The New Psychology of Success">
+                <div class="middle">
+                    <div class="booktag">Mindset: The New Psychology of Success</div>
+                </div> 
+                </a>  
+            </div>
+          
+            <div class="lp-col m2 containerf">
+              <a href="https://www.pdfdrive.com/braiding-sweetgrass-indigenous-wisdom-scientific-knowledge-and-the-teachings-of-plants-e60737077.html" target="_blank">
+                  <img src="https://s.pdfdrive.com/assets/thumbs/ed5/ed59854c54d482b0efb0ee9bebbd7a72-s.jpg" class="lp-hover-opacity image" alt="Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants">
+                  <div class="middle">
+                    <div class="booktag">Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants</div>
+                  </div> 
+                </a>
+            </div>
+
+            <div class="lp-col m2 containerf">
+              <a href="https://www.pdfdrive.com/the-power-of-now-a-guide-to-spiritual-enlightenment-e162371455.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/d65/d65818a09256c8e3e861e25a6799ab18-s.jpg" class="lp-hover-opacity image" alt="The Power of Now: A Guide to Spiritual Enlightenment">
+                    <div class="middle">
+                        <div class="booktag">The Power of Now: A Guide to Spiritual Enlightenment</div>
+                    </div> 
+              </a>    
+            </div>
+          </div>
+          <!--div ends for top col-->
+          <h1>Books on Finding Passion and Purpose in Life</h1>
+
+        <!-- grid for books inspo-->
+        <!-- Responsive Grid. -->
+        <div class="lp-row-padding lp-center lp-padding-32">
+
+            <div class="lp-col m2 containerf">
+              <a href="https://www.pdfdrive.com/i-am-malala-the-story-of-the-girl-who-stood-up-for-education-e14796117.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/969/96921e068f4aa96042ff3d9425368769-s.jpg" class="lp-hover-opacity image" alt="I am Malala: The Story of the Girl Who Stood Up for Education">
+                <div class="middle">
+                    <div class="booktag">I am Malala: The Story of the Girl Who Stood Up for Education</div>
+                </div> 
+              </a>
+            </div>
+
+            <div class="lp-col m2 containerf">
+               <a href="https://www.pdfdrive.com/resisting-happiness-a-true-story-about-why-we-sabotage-ourselves-e39563520.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/bf9/bf93b21ca6f860b22862fb495157ee5e-s.jpg"  class="lp-hover-opacity image" alt="Resisting Happiness: A True Story about Why We Sabotage Ourselves">
+                <div class="middle">
+                    <div class="booktag">Resisting Happiness: A True Story about Why We Sabotage Ourselves</div>
+                </div> 
+                </a> 
+            </div>
+
+            <div class="lp-col m2 containerf">
+                <a href="https://www.pdfdrive.com/start-where-you-are-a-guide-to-compassionate-living-e60375000.html" target="_blank">
+                <img src="https://s.pdfdrive.com/assets/thumbs/f0f/f0f41178adda35d162a59e04ae087c74-s.jpg" class="lp-hover-opacity image" alt="Mindset: The New Psychology of Success">
+                <div class="middle">
+                    <div class="booktag">Start Where You Are: A Guide to Compassionate Living</div>
+                </div> 
+                </a>  
+            </div>
+          
+            <div class="lp-col m2 containerf">
+                 <a href="https://www.pdfdrive.com/the-purpose-driven-life-what-on-earth-am-i-here-for-e185720921.html" target="_blank">
+                  <img src="https://s.pdfdrive.com/assets/thumbs/f09/f093c203496024043455817fd7a7ef3f-s.jpg" class="lp-hover-opacity image" alt="The Purpose-Driven Life: What on Earth Am I Here For?">
+                  <div class="middle">
+                    <div class="booktag">The Purpose-Driven Life: What on Earth Am I Here For?</div>
+                  </div> 
+                </a>
+            </div>
+
+          </div>
+          <!--div ends for top col-->
+  <!-- grid ends here-->
+      
+    </div>
+  </div><!-- Second Grid Div closed -->
+
+
+  <!-- Quote Container-->
+  <div class="lp-container lp-lime lp-center lp-opacity lp-padding-64">
+    <div id="container">
+    <h2>Get Your Daily Quote</h2>
+      <div id="quoteContainer">
+				<p></p>
+				<p id="quoteGenius"></p>			
+      </div><!--end quoteContainer-->
+      
+      <div id="buttonContainer">
+				<a href="#" id="quoteButton">Quote Me</a>
+    </div><!--end buttonContainer-->
+  </div>  
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section" style="background-color: black; position: relative;">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row lp-padding-64">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>Cape Town, South Africa</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>+27 012 3456 789</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>secretlibrary@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="images/The/21.png" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>The books on this website are not for sale.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="recommended.html">Recommended Books</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2020, All Right Reserved <a href="https://lebeatrix.github.io/" target="_blank">Len&eacute; Prinsloo</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li style="display: inline-block; margin-left: 20px;"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="recommended.html">Recommended Books</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+</body>
+  </html> 
