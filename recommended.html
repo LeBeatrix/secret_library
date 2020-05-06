@@ -123,23 +123,26 @@
         </style>
 
  <!-- Navbar -->
- <div class="lp-top">
+<div class="lp-top">
   <div class="lp-bar lp-pale-red lp-card lp-large">
-    <a href="index.html" ><img class="lp-small lp-align-left" src="images/The/61.png" width="150px" height="50px"></a>
+    <a href="index.html" style="text-decoration: none;">
+      <img class="lp-small lp-align-left" src="images/The/61.png" width="150px" height="50px">
+    </a>
     <a class="lp-bar-item lp-button lp-hide-medium lp-hide-large lp-right lp-padding-large lp-hover-white lp-large lp-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-   <a href="index.html" class="lp-bar-item lp-button lp-padding-large lp-hover-red">Home</a>
-      <a href="about.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">About</a>
-      <a href="recommended.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-red">Recommended Books</a>
-      <a href="gallery.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Gallery</a>
-    </div>
-  
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="lp-bar-block lp-white lp-hide lp-hide-large lp-hide-medium lp-large">
-      <a href="about.html" class="lp-bar-item lp-button lp-padding-large">About</a>
-      <a href="recommended.html" class="lp-bar-item lp-button lp-padding-large">Recommended Books</a>
-      <a href="gallery.html" class="lp-bar-item lp-button lp-padding-large">Gallery</a>
-    </div>
+    <a href="index.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Home</a>
+    <a href="about.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">About</a>
+    <a href="recommended.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-red">Recommended Books</a>
+    <a href="gallery.html" class="lp-bar-item lp-button lp-hide-small lp-padding-large lp-hover-red">Gallery</a>
   </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="lp-bar-block lp-pale-red lp-hide lp-hide-large lp-hide-medium lp-large">
+    <a href="index.html" class="lp-bar-item lp-button lp-padding-large lp-hover-red">Home</a>
+    <a href="about.html" class="lp-bar-item lp-button lp-padding-large lp-hover-red">About</a>
+    <a href="recommended.html" class="lp-bar-item lp-button lp-padding-large lp-red">Recommended Books</a>
+    <a href="gallery.html" class="lp-bar-item lp-button lp-padding-large lp-hover-red">Gallery</a>
+  </div>
+</div>
 
   <!-- Header -->
 <header class="bgimg lp-container lp-center" style="padding:128px 16px">
@@ -147,6 +150,7 @@
   -3px 6px 5px #58d1e3; font-family: Raleway,sans-serif;">RECOMMENDED BOOKS</h1>
   </header>
 
+  <body>
   <!-- Second Grid -->
   <div class="lp-row-padding lp-light-grey lp-padding-64 lp-container">
     <div class="lp-content">
@@ -375,6 +379,18 @@
         </div>
     </div>
 </footer>
-  
+
+<script>
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("lp-show") == -1) {
+      x.className += " lp-show";
+    } else { 
+      x.className = x.className.replace(" lp-show", "");
+    }
+  }
+  </script>
+
 </body>
   </html> 
